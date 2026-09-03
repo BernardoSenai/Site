@@ -1,0 +1,16 @@
+{
+  "name": "byte-e-bun-api",
+  "version": "1.0.0",
+  "description": "api da byte e bun",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Bernardo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
