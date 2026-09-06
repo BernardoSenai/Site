@@ -24,7 +24,7 @@ Site/
 
 > Ajuste este passo a passo conforme as tecnologias específicas usadas em cada pasta (por exemplo, `npm install` e `npm start`, ou simplesmente abrir o `index.html` no navegador).
 
-## 🛠️ Tecnologias
+ 🛠️ Tecnologias
 
 - HTML
 - CSS
