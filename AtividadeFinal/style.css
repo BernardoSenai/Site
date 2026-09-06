@@ -1,100 +1,175 @@
-body {
-    font-family: Arial, sans-serif;
+/* ===== Reset básico ===== */
+* {
     margin: 0;
-    padding: 20px;
-    text-align: center;
-    background-color: #020202;
+    padding: 0;
+    box-sizing: border-box;
 }
-p {
-    margin: 5px 0;
-    color: #915c18;
-    text-align: right;
+
+body {
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+    background-color: #7a0c0c;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.03) 0, transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(255,255,255,0.03) 0, transparent 40%);
+    color: #000;
+    min-height: 100vh;
+    padding-bottom: 40px;
 }
-.opcao-img {
-    border: none;
-    background: none;
-    padding: 4px;
-    cursor: pointer;
-}
-.opcao-img img {
-    width: 100px;      /* largura que você quiser */
-    height: 100px;      /* altura que você quiser */
-    object-fit: cover;  /* corta a imagem mantendo a proporção, sem esticar */
-}
+
+/* ===== Logo ===== */
 .logo {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    width: 200px;
-    height: 200px;
+    align-items: center;
+    padding: 20px 30px 0;
 }
 
+.logo img {
+    width: 130px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+}
+
+/* ===== Título ===== */
 h1 {
     text-align: center;
-    color: #915c18;
-}
-h2{
-    color:aliceblue
+    color: #000;
+    font-size: 2.6rem;
+    font-weight: 900;
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+    margin: 10px 0 40px;
+    padding: 0 20px;
 }
 
+/* ===== Área das seleções ===== */
 .selecoes {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 20px;
-    padding: 25px;
-    border: 2px solid #45551a;
-    border-radius: 10px;
-    background-color: #1f1501;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+    padding: 20px 30px;
 }
 
-.selecoes > div {
+.opcoes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    border: 1px solid #45551a;
-    border-radius: 8px;
-    background-color: #1f1501;
+    gap: 15px;
+    min-width: 220px;
 }
 
-select {
-    padding: 8px;
-    font-size: 14px;
-    background-color: #cdeee2;
-    border: 1px solid #7fc9ac;
-    border-radius: 6px;
-    color: #2f4f4f;
+.opcoes h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* ===== Botões de opção (imagem + nome) ===== */
+.opcao-img {
+    width: 220px;
+    border: 3px solid #000;
+    border-radius: 14px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background-color: #f5a623; /* cor padrão, sobrescrita abaixo */
+}
+
+.opcao-img img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.opcao-img p {
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #000;
+    text-align: center;
+}
+
+.opcao-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.opcao-img.selecionado {
+    border-color: #fff;
+    box-shadow: 0 0 0 3px #000, 0 0 15px 3px #ffd23f;
+}
+
+/* Alterna as cores de fundo dos cards, igual ao print de referência */
+.opcao-img:nth-of-type(3n+1) { background-color: #f5a623; } /* laranja */
+.opcao-img:nth-of-type(3n+2) { background-color: #b3221f; } /* vermelho */
+.opcao-img:nth-of-type(3n+3) { background-color: #9bd47a; } /* verde */
+
+/* deixa o texto legível em cima do fundo vermelho */
+.opcao-img:nth-of-type(3n+2) p {
+    color: #fff;
+}
+
+/* ===== Área do botão calcular ===== */
 .area-botao {
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 220px;
 }
 
 #calcular {
-    padding: 10px 25px;
-    font-size: 16px;
-    background-color: #cdeee2;
-    border: 1px solid #7fc9ac;
-    border-radius: 6px;
-    color: #2f4f4f;
+    background-color: #ffd23f;
+    border: 3px solid #000;
+    border-radius: 14px;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: 900;
     cursor: pointer;
+    transition: transform 0.15s ease;
 }
 
 #calcular:hover {
-    background-color: #b3e0cf;
+    transform: translateY(-3px);
 }
 
 #resultado {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2f4f4f;
-    background-color: #f5f0e6;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-top: 15px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* ===== Faixa quadriculada no rodapé ===== */
+body::after {
+    content: "";
+    display: block;
+    height: 24px;
+    margin-top: 40px;
+    background-image:
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    background-color: #b3221f;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 720px) {
+    .selecoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
 }
