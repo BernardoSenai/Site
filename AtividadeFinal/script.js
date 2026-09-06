@@ -1,37 +1,8 @@
 const URL_API = "https://bite-bun.onrender.com";
 
-async function carregarCardapio() {
-    const resposta = await fetch(`${URL_API}/cardapio`);
-    const dados = await resposta.json();
-    console.log(dados);
-    popularOpcoes("opcoes-pao", dados.filter((item) => item.categoria === "pao"));
-    popularOpcoes("opcoes-recheio", dados.filter((item) => item.categoria === "recheio"));
-    popularOpcoes("opcoes-molho", dados.filter((item) => item.categoria === "molho"));
-
-    marcarSelecao("opcoes-pao");
-    marcarSelecao("opcoes-recheio");
-    marcarSelecao("opcoes-molho");
-}
-carregarCardapio();
-
-function popularOpcoes(idGrupo, itens) {
-    const grupo = document.querySelector(`#${idGrupo}`);
-    for (let i = 0; i < itens.length; i++) {
-        const item = itens[i];
-
-        const botao = document.createElement("button");
-        botao.type = "button";
-        botao.className = "opcao-img";
-        botao.dataset.valor = item.nome;
-
-        const img = document.createElement("img");
-        img.src = `imagens/${item.nome}.jpeg`;
-        img.alt = item.nome;
-
-        botao.appendChild(img);
-        grupo.appendChild(botao);
-    }
-}
+marcarSelecao("opcoes-pao");
+marcarSelecao("opcoes-recheio");
+marcarSelecao("opcoes-molho");
 
 function marcarSelecao(idGrupo) {
     const grupo = document.querySelector(`#${idGrupo}`);
