@@ -1,7 +1,5 @@
 # Site
 
-> site bite bun ao ar
-
 Projeto de site desenvolvido como atividade prática, organizado em duas partes principais: uma **API** e uma **Atividade Final**.
 
 ## 📁 Estrutura do projeto
