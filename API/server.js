@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const dotenv = require("dotenv").config();
 
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://bite-bun-6eje.onrender.com"; // Substitua pela URL do seu frontend.
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://bite-bun-6eje.onrender.com" || "https://site-kxis.onrender.com/"; // Substitua pela URL do seu frontend.
 
 app.use(cors({
   origin: FRONTEND_URL
