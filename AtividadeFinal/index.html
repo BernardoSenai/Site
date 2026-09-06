@@ -2,38 +2,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byte & Bun</title>
+    <title>Bon's Burguer</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem vindo a Byte & Bun</h1>
+  <div class="logo" id="logo">
+  <img src="imagens/logo.jpeg" alt="logo">
+   </div> 
+  <h1>Bem vindo a Bon's Burguer</h1>
    <div class="selecoes">
-    <div>
+    <div class="opcoes" id="opcoes-pao">
     <h2>Pão</h2>
-    <img id="img-pao" class="imagem-item" src="images/placeholder.svg" alt="Pão selecionado">
-    <select id="pao" name="pao">
+    <button type="button"class="opcao-img">
+       <img src="imagens/paoTradicional.jpeg" alt="tradicional">
+       <p>Tradicional ------------- 1.00</p>
+    </button>
 
-    </select>
+    <button type="button"class="opcao-img">
+       <img src="imagens/paoIntegral.jpeg" alt="integral">
+       <p>Integral ------------- 2.00</p>
+    </button>
+
+    <button type="button"class="opcao-img">
+       <img src="imagens/paoCiabatta.jpeg" alt="ciabatta">
+       <p>Ciabatta ------------- 2.50</p>
+    
+    
+      </button>
     </div>
     <div>
   <h2>Recheio</h2>
-  <img id="img-recheio" class="imagem-item" src="images/placeholder.svg" alt="Recheio selecionado">
-  <select id="recheio" name="recheio">
+  <button type="button"class="opcao-img">
+       <img src="imagens/frango.jpeg" alt="frango">
+       <p>Frango ------------- 5.00</p>
+    </button>
 
-  </select>
+    <button type="button"class="opcao-img">
+       <img src="imagens/carne.jpeg" alt="carne">
+       <p>Carne ------------- 6.50</p>
+    </button>
+
+    <button type="button"class="opcao-img">
+       <img src="imagens/vegetariano.jpeg" alt="vegetariano">
+       <p>Vegetariano ------------- 4.50</p>
+    </button>
     </div>
     <div>
   <h2>Molho</h2>
-  <img id="img-molho" class="imagem-item" src="images/placeholder.svg" alt="Molho selecionado">
-  <select id="molho" name="molho">
+  <button type="button"class="opcao-img">
+       <img src="imagens/maionese.jpeg" alt="maionese">
+       <p>Maionese ------------- 0.50</p>
+    </button>
+    <button type="button"class="opcao-img">
+       <img src="imagens/mostarda.jpeg" alt="mostarda">
+       <p>Mostarda ------------- 0.50</p>
+    </button>
+    <button type="button"class="opcao-img">
+       <img src="imagens/especial.jpeg" alt="especial">
+       <p>Especial ------------- 1.50</p>
+    </button>
 
-</select>
     </div>
- </div>
-
- <div class="area-botao">
+    <div class="area-botao">
+    <button id="calcular">Calcular</button>
     <p id="resultado"></p>
- </div>
+    </div>
+ </div> 
 </body>
 </html>
