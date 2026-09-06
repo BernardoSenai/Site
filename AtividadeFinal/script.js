@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:5500";
+const URL_API = "https://bite-bun.onrender.com";
 
 async function carregarCardapio() {
     const resposta = await fetch(`${URL_API}/cardapio`);
