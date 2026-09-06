@@ -25,7 +25,7 @@ function popularOpcoes(idGrupo, itens) {
         botao.dataset.valor = item.nome;
 
         const img = document.createElement("img");
-        img.src = `imagens/${item.nome}.png`;
+        img.src = `imagens/${item.nome}.jpeg`;
         img.alt = item.nome;
 
         botao.appendChild(img);
